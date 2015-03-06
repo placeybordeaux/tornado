@@ -402,7 +402,7 @@ class HTTPServerRequest(object):
         return self.protocol + "://" + self.host + self.uri
 
     def request_time(self):
-        """Returns the amount of time it took for this request to execute."""
+        """Returns the amount of seconds it took for this request to execute."""
         if self._finish_time is None:
             return time.time() - self._start_time
         else:
